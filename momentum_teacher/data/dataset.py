@@ -37,7 +37,7 @@ class SSL_Dataset(ImageFolder):
 
 class ImageNet(ImageFolder):
     def __init__(self, train, transform=None):
-        root = "imagenet_{}".format('train' if train else 'val')
+        root = "data/imagenet_{}".format('train' if train else 'val')
         super(ImageNet, self).__init__(root, transform=transform )
         self.transform = transform
 

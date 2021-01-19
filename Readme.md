@@ -88,3 +88,8 @@ To do unsupervised pre-training with 4096 batch-sizes and 128 2080 GPUs, pls fol
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_200e_4096batch_16mm_exp.py)| 200                 |  ~10hour       | 71.5         |   -    |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_300e_4096batch_16mm_exp.py)| 300                 |  ~15hour       | 72.1         |   -    |
 
+
+# Data Preparation
+Prepare the ImageNet data in `${root_of_your_clone}/data/imagenet_train`, `${root_of_your_clone}/data/imagenet_val`.
+Since we have an internal platform(storage) to read imagenet, I have not tried the local mode. 
+You may need to do some modification in `momentum_teacher/data/dataset.py` to support the local mode.
