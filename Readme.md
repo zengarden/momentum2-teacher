@@ -27,7 +27,7 @@ With a pre-trained model, to train a supervised linear classifier on frozen feat
 2. using `-b` to specify batch_size, e.g., `-b 256`
 3. using `--experiment-name` to specify the folder for saving pre-training models.
 ```
-python3 momentum_teacher/tools/eval.py -b 256 --experiment-name your_exp
+python3 momentum_teacher/tools/eval.py -b 256 --experiment-name your_exp -f momentum_teacher/exps/arxiv/linear_eval_exp_byol.py
 ```
 
 
@@ -67,14 +67,13 @@ export MACHINE=1; export MACHINE_TOTAL=4; python3 momentum_teacher/tools/train.p
 export MACHINE=2; export MACHINE_TOTAL=4; python3 momentum_teacher/tools/train.py -b 4096 -f xxx
 # machine 4:
 export MACHINE=3; export MACHINE_TOTAL=4; python3 momentum_teacher/tools/train.py -b 4096 -f xxx
-
 ```
 
 results of linear-eval:
 
 |         pre-train code                                                                        |pre-train</br> epochs| pre-train time  | accuracy     | weights|
 |-----------------------------------------------------------------------------------------------|---------------------|  -------------  |  --------    | ------ |
-|[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_100e_4096batch_16mm_exp.py)| 100                 |  ~11hour        |  70.1        |   -    |
+|[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_100e_4096batch_16mm_exp.py)| 100                 |  ~11hour        |  70.3        |   -    |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_200e_4096batch_16mm_exp.py)| 200                 |  ~22hour        | coming soon  |   -    |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_300e_4096batch_16mm_exp.py)| 300                 |  ~33hour        | coming soon  |   -    |
 
@@ -93,3 +92,5 @@ To do unsupervised pre-training with 4096 batch-sizes and 128 2080 GPUs, pls fol
 Prepare the ImageNet data in `${root_of_your_clone}/data/imagenet_train`, `${root_of_your_clone}/data/imagenet_val`.
 Since we have an internal platform(storage) to read imagenet, I have not tried the local mode. 
 You may need to do some modification in `momentum_teacher/data/dataset.py` to support the local mode.
+
+
