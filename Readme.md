@@ -86,7 +86,7 @@ results of linear-eval:
 |-----------------------------------------------------------------------------------------------|---------------------|  -------------  |  --------    | ------ |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_100e_4096batch_16mm_exp.py)| 100                 |  ~11hour        |  70.3        |   -    |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_200e_4096batch_16mm_exp.py)| 200                 |  ~22hour        |  72.5        |   -    |
-|[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_300e_4096batch_16mm_exp.py)| 300                 |  ~33hour        | coming soon  |   -    |
+|[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_300e_4096batch_16mm_exp.py)| 300                 |  ~33hour        |  73.7        |   -    |
 
 
 
@@ -96,6 +96,11 @@ To do unsupervised pre-training with 4096 batch-sizes and 128 2080 GPUs, pls fol
 |-----------------------------------------------------------------------------------------------|---------------------|  ------------- |  --------    | ------ |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_100e_4096batch_16mm_exp.py)| 100                 |  ~5hour        | 69.0         |   -    |
 |[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_200e_4096batch_16mm_exp.py)| 200                 |  ~10hour       | 71.5         |   -    |
-|[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_300e_4096batch_16mm_exp.py)| 300                 |  ~15hour       | 72.1         |   -    |
+|[path](momentum_teacher/exps/arxiv/exp_128_2080ti/momentum2_teacher_300e_4096batch_16mm_exp.py)| 300                 |  ~15hour       | 72.3         |   -    |
 
 
+## Disclaimer
+This is an implementation for [Momentum^2 Teacher](https://arxiv.org/pdf/2101.07525v1.pdf), it is worth noting that:
+
+* The original implementation is based on our internal Platform.
+* This released version has slightly better performances compared with the tech report's.
