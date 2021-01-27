@@ -60,8 +60,8 @@ After pretraining on 8 NVIDIA 2080 GPUS and 256 batch-sizes, the results of line
 |         pre-train code                                                                        |pre-train</br> epochs| pre-train time | accuracy         | wights |
 |-----------------------------------------------------------------------------------------------|---------------------|  ------------- |  --------        | ------ |
 |[path](momentum_teacher/exps/arxiv/exp_8_2080ti/momentum2_teacher_100e_32batch_1mm_099_exp.py) | 100                 |  ~2.5 day      | 70.4             |  -     |
-|[path](momentum_teacher/exps/arxiv/exp_8_2080ti/momentum2_teacher_200e_32batch_1mm_099_exp.py) | 200                 |  _             | coming soon      |  -     |
-|[path](momentum_teacher/exps/arxiv/exp_8_2080ti/momentum2_teacher_300e_32batch_1mm_099_exp.py) | 300                 |  _             | coming soon      |  -     |
+|[path](momentum_teacher/exps/arxiv/exp_8_2080ti/momentum2_teacher_200e_32batch_1mm_099_exp.py) | 200                 |  ~5 day        | 72.3             |  -     |
+|[path](momentum_teacher/exps/arxiv/exp_8_2080ti/momentum2_teacher_300e_32batch_1mm_099_exp.py) | 300                 |  ~7.5 day      | 72.9             |  -     |
 
 ## Results of Pretraining on Multiple Machines
 

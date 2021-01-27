@@ -70,10 +70,12 @@ class LARS_SGD(Optimizer):
                 if not lars_exclude:
                     weight_norm = torch.norm(p.data)
                     grad_norm = torch.norm(d_p)
-                    # if weight_norm * grad_norm > 1e-8:
-                    #     local_lr = eta * weight_norm / (grad_norm + weight_decay * weight_norm)
-                    local_lr = eta * weight_norm / (grad_norm + weight_decay * weight_norm + 1e-8)
-                    actual_lr = local_lr * lr
+                    if weight_norm * grad_norm > 1e-8:
+                        local_lr = eta * weight_norm / (grad_norm + weight_decay * weight_norm)
+                        actual_lr = local_lr * lr
+                        # local_lr = eta * weight_norm / (grad_norm + weight_decay * weight_norm + 1e-8)
+                    else:
+                        actual_lr = lr
                 else:
                     actual_lr = lr
 
